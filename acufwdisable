@@ -1,0 +1,3 @@
+sudo ufw delete allow 56517
+sudo ufw delete allow 20913
+sudo ufw delete allow 60063

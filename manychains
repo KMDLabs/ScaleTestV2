@@ -1,0 +1,3 @@
+./komodod -ac_name=TXCC -ac_cc=3 -ac_supply=50000 -ac_end=0 -ac_reward=100000000 -ac_halving=0 -ac_decay=0 & # rpcport 56518
+./komodod -ac_name=TXCC000 -ac_cc=3 -ac_supply=50000 -ac_end=0 -ac_reward=100000000 -ac_halving=0 -ac_decay=0 & # rpcport 20914
+./komodod -ac_name=TXCC001 -ac_cc=3 -ac_supply=50000 -ac_end=0 -ac_reward=100000000 -ac_halving=0 -ac_decay=0 & # rpcport 60064
