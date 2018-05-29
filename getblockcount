@@ -1,0 +1,3 @@
+#!/bin/bash
+source chain
+komodo-cli -ac_name=$chain getblockcount

@@ -1,3 +1,0 @@
-sudo ufw allow 56517 comment 'TXCC'
-sudo ufw allow 20913 comment 'TXCC000'
-sudo ufw allow 60063 comment 'TXCC001'
