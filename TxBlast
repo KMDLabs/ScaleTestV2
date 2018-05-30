@@ -1,6 +1,6 @@
 #!/bin/bash
 #Txblaster script
-source chain 		#source from docker env var
+chain=$ASSET_NAME 		#source from docker env var
 source passphrase	#can stay in container
 source amount		#stay in contanier: make 80% of total supply
 source TXID		#generated inside container at 10th block

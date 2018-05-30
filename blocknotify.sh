@@ -1,5 +1,5 @@
 #!/bin/bash
-source chain
+chain=$ASSET_NAME
 if [ "$chain" = "" ]
   then
     chain=$(ls ~/.komodo/)
