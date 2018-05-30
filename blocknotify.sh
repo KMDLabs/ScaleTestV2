@@ -1,11 +1,4 @@
 #!/bin/bash
-chain=$ASSET_NAME
-if [ "$chain" = "" ]
-  then
-    chain=$(ls ~/.komodo/)
-    echo "chain=$chain" > chain
-fi
-
 HEIGHT=$(./getblockcount)
 
 if [ "$HEIGHT" = "3" ]
@@ -24,4 +17,3 @@ if [ "$HEIGHT" = "8" ]
   then
    ./TxBlast
 fi
-
