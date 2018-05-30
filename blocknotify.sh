@@ -22,6 +22,6 @@ fi
 
 if [ "$HEIGHT" = "8" ]
   then
-    ./TxBlast
+   # ./TxBlast
 fi
 
