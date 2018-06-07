@@ -1,27 +1,9 @@
 #!/bin/bash
 #cd ~/scaletest
 
-chainstart=$1
-chainend=$2
+chainstart=0
+chainend=63
 dpowfile=startdpow
-
-if [[ -z ${2+x} && ! -z ${1+x} ]]
-then
-    echo
-    echo "setchains with no parameters will set you to work with all coins in the master list, otherwise you can set a range of chains to work with:"
-    echo
-    echo "Usage: ./setchains <chainfrom> <chainto>"
-    echo "Example: ./setchains 0 99"
-    echo
-    exit
-fi
-
-if [[ ! -z ${1+x} ]]
-then
-   count=chainstart
-else
-    count=0
-fi
 
 source coinlist
 
