@@ -8,7 +8,13 @@ You need to install komodo from libscott branch momo. The buildkomodo.sh script 
 
 `./buildkomodo.sh`
 
-**Make sure you have launched the chains with the correct pubkey.txt**
+Set your pubkey.txt
+
+`nano ~/komodo/src/pubkey.txt`
+
+Launch the chains
+
+`./sync_assets`
 
 Install SuperNET from jl777 branch
 
