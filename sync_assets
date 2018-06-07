@@ -1,0 +1,28 @@
+#!/bin/bash
+delay=1
+source seedip
+source coinlist
+pubkey=0
+source ~/komodo/src/pubkey.txt
+
+if [[ pubkey -eq 0 ]]; then
+  echo " "
+  echo "Please set pubkey.txt in ~/komodo/src/pubkey.txt"
+  echo "pubkey=your_pubkey_here"
+  echo " "
+  exit
+fi
+
+count=0
+while [[ $count -le ${#coinlist[@]} ]]
+do
+  all=${coinlist[count]}
+  name=${all%% *}
+  supply=`expr "$all" : '.* \(.*\)'`
+  if [ "$name" != "" ]
+    then
+     ~/komodo/src/komodod -pubkey=$pubkey -ac_cc=3 -ac_name=$name -ac_supply=$supply -ac_reward=100000000 $1 -addnode=$seed_ip &
+     sleep $delay
+  fi
+  count=$(( $count +1 ))
+done
