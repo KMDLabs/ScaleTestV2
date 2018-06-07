@@ -1,3 +1,6 @@
+#!/bin/bash
+sudo apt-get update
+sudo apt-get -y install cmake
 cd ~
 git clone https://github.com/nanomsg/nanomsg
 cd nanomsg
