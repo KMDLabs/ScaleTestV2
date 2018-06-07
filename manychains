@@ -1,2 +1,0 @@
-source pubkey.txt
-komodod -pubkey=$pubkey -ac_name=TEST -ac_cc=1 -ac_supply=1000000 -ac_end=0 -ac_reward=100000000 -ac_halving=0 -ac_decay=0 -addnode=192.168.0.149 '-blocknotify=/home/blackjok3r/crypto/scaletest2/blocknotify.sh %s' &
