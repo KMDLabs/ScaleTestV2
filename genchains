@@ -1,0 +1,40 @@
+#!/bin/bash
+startdir=$PWD
+numchains=$1
+chainname=$2
+numcoins=$3
+numacreward=100000000
+coinlistfile=coinlist
+
+if [ -z ${1+x} ] || [ -z ${2+x} ] || [ -z ${3+x} ]
+then
+    echo
+    echo "Usage: ./genacs <numchains> <chainname> <supply>"
+    echo "Example: ./genacs 8192 TXSCL 7777777"
+    echo
+    exit
+fi
+
+cd ~/komodo/src
+#git pull
+#gcc -o manychains komodo_port.c
+./manychains -genjson $numchains $chainname $numcoins 0 $numacreward > $startdir/outfile
+
+cd $startdir
+rm chains.json
+tail -n +2 outfile >> chains.json
+rm outfile
+chains=$(cat chains.json)
+
+notarize=$(echo $chains | jq '.[:64]')
+count=0
+echo "coinlist=(" > $coinlistfile
+while [[ $count -lt 64 ]]
+do
+  coinjson=$(echo $notarize | jq .[$count])
+  chain=$(echo $coinjson | jq -r .assetname)
+  supply=$(echo $coinjson | jq -r .supply)
+  echo "'$chain $supply'" >> $coinlistfile
+  count=$(( $count +1 ))
+done
+echo ")" >> $coinlistfile
