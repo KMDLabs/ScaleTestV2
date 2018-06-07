@@ -30,6 +30,8 @@ You need the usual wp_7776 file, there is one in this repo that will source your
 
 `nano ~/SuperNET/iguana/passphrase.txt`
 
+`passphrase=yourpassphrase`
+
 Copy your pubkey.txt to SuperNET/iguana dir
 
 `cp ~/komodo/src/pubkey.txt ~/SuperNET/iguana/`
