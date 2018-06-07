@@ -12,18 +12,6 @@ Install nanomsg
 
 `./installnanomsg.sh`
 
-Set your pubkey.txt
-
-`nano ~/komodo/src/pubkey.txt`
-
-Launch the chains
-
-`./sync_assets`
-
-Once you have all 64 TXSCL chains running and synced. Import your private key:
-
-`./assets-cli importprivkey "private key"`
-
 Install SuperNET from jl777 branch
 
 `git clone https://github.com/jl777/SuperNET.git -b jl777 ~/SuperNET`
@@ -32,16 +20,27 @@ You need the usual wp_7776 file, there is one in this repo that will source your
 
 `cp wp_7776 ~/SuperNET/iguana`
 
+You will also need to: `cp m_notary_scale ~/SuperNET/iguana/`
+
 `nano ~/SuperNET/iguana/passphrase.txt`
 
 `passphrase=yourpassphrase`
+
+Set your pubkey.txt
+
+`nano ~/komodo/src/pubkey.txt`
 
 Copy your pubkey.txt to SuperNET/iguana dir
 
 `cp ~/komodo/src/pubkey.txt ~/SuperNET/iguana/`
 
-You will also need to: `cp m_notary_scale ~/SuperNET/iguana/`
+Launch the chains
 
+`./sync_assets`
+
+Once you have all 64 TXSCL chains running and synced. Import your private key:
+
+`./assets-cli importprivkey "private key"`
 
 Once this is done and you have a balance in your address, launch m_notary_scale.
 
