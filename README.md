@@ -16,6 +16,10 @@ Launch the chains
 
 `./sync_assets`
 
+Once you have all 64 TXSCL chains running and synced. Import your private key:
+
+`./assets-cli importprivkey "private key"`
+
 Install SuperNET from jl777 branch
 
 `git clone https://github.com/jl777/SuperNET.git -b jl777`
@@ -32,11 +36,8 @@ Copy your pubkey.txt to SuperNET/iguana dir
 
 You will also need to: `cp m_notary_scale ~/SuperNET/iguana/`
 
-Once you have all 64 TXSCL chains running and synced. Import your private key:
 
-`assets-cli importprivkey "private key"`
-
-Once this is done and you have a balance in your address, launch m_notary_scale
+Once this is done and you have a balance in your address, launch m_notary_scale.
 
 `cd ~/SuperNET/iguana`
 
