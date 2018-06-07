@@ -1,0 +1,15 @@
+#!/bin/bash
+source coinlist
+count=0
+
+while [ "x${coinlist[count]}" != "x" ]
+do
+  all=${coinlist[count]}
+  name=${all%% *}
+  if [ "$name" != "" ]
+    then
+     echo $name
+     ./acsplit $name 150
+  fi
+  count=$(( $count +1 ))
+done
