@@ -6,6 +6,10 @@ This repo generates the chains and provides the nessary files to run a Notary No
 For notary nodes, you need to do the usual things but a few steps are diffrent.
 You need to install komodo from libscott branch momo. The buildkomodo.sh script will do this for you if using momo branch of this repo.
 
+Install nanomsg
+
+`./installnanomsg.sh`
+
 `./buildkomodo.sh`
 
 Set your pubkey.txt
