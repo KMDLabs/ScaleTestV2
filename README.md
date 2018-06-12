@@ -36,11 +36,19 @@ Copy your pubkey.txt to SuperNET/iguana dir
 
 Launch the chains
 
+`cd ~/komodo/src/`
+
+`source pubkey.txt;./komodod -notary -pubkey=$pubkey`
+
 `./sync_assets`
 
 Once you have all 64 TXSCL chains running and synced. Import your private key:
 
 `./assets-cli importprivkey "private key"`
+
+`cd ~/komodo/src`
+
+`komodo-cli importprivkey "private key"`
 
 Once this is done and you have a balance in your address, launch m_notary_scale.
 
