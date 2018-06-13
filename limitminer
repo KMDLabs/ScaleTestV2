@@ -11,7 +11,7 @@ do
      echo $name
      processinfo=$(ps aux | grep $name | grep gen)
      pid=$(echo $processinfo | awk '{print $2}')
-     cpulimit -p $pid -l 10
+     cpulimit -p $pid -l 33 -b
   fi
   count=$(( $count +1 ))
 done
