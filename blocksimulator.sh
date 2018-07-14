@@ -2,7 +2,8 @@
 STARTURL=https://4qcnktspmb.execute-api.us-east-1.amazonaws.com/dev/activation
 start=$1
 finish=$2
-source start
+start=0
+rm start
 acbase="TXSCLZ"
 
 while [[ $start -eq 0 ]]; do
