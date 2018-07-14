@@ -23,7 +23,7 @@ do
   -d "{ \"size\": ${size}, \"height\": ${height}, \"time\": ${time}, \"tx\": 1, \"ac\": \"${CHAIN}\", \"ttl\": ${ttl} }" \
   ${BLOCKNOTIFYURL} )
   echo $resultJSON
-  if [[ $height -eq 20 ]]; then
+  if [[ "$STOP" = "true" ]]; then
     exit
   fi
   height=$(( $height +1 ))
