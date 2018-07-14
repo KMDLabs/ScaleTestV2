@@ -1,7 +1,15 @@
 #!/bin/bash
+STARTURL=https://4qcnktspmb.execute-api.us-east-1.amazonaws.com/dev/activation
 start=$1
 finish=$2
+source start
 acbase="TXSCLZ"
+
+while [[ $start -eq 0 ]]; do
+  curl $STARTURL -o start
+  sleep 30
+  source start
+done
 
 for i in `seq $start $finish`;
 do
