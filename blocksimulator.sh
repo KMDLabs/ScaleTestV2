@@ -1,7 +1,7 @@
 #!/bin/bash
 STARTURL=https://4qcnktspmb.execute-api.us-east-1.amazonaws.com/dev/activation
-start=$1
-finish=$2
+startchain=$1
+finishchain=$2
 start=0
 rm start
 acbase="TXSCLZ"
@@ -13,7 +13,7 @@ while [[ $start -eq 0 ]]; do
   echo $start
 done
 
-for i in `seq $start $finish`;
+for i in `seq $startchain $finishchain`;
 do
   CHAIN=`echo "obase=16;  ${i}" | bc`
   if [ ${i} -lt 16 ]; then
