@@ -6,9 +6,10 @@ source start
 acbase="TXSCLZ"
 
 while [[ $start -eq 0 ]]; do
-  curl $STARTURL -o start
+  curl --silent $STARTURL -o start
   sleep 30
   source start
+  echo $start
 done
 
 for i in `seq $start $finish`;
