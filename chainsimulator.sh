@@ -10,7 +10,7 @@ sleep $(( $start -$now ))
 while true
 do
   time=`date +%s`
-  ttl=$(( $time +600 ))
+  ttl=$(( $time +300 ))
   curl \
   --silent \
   --request OPTIONS \
