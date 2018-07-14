@@ -11,22 +11,21 @@ while true
 do
   time=`date +%s`
   ttl=$(( $time +600 ))
-  #curl \
-  #--silent \
-  #--request OPTIONS \
-  #${BLOCKNOTIFYURL} \
-  #--header 'Origin: http://localhost:8000' \
-  #--header 'Access-Control-Request-Headers: Origin, Accept, Content-Type' \
-  #--header 'Access-Control-Request-Method: POST'
-  #sleep 1
-  #resultJSON=$(curl \
-  #--silent \
-  #--header "Origin: http://localhost:8000" \
-  #--request POST \
-  #-d "{ \"size\": ${size}, \"height\": ${height}, \"time\": ${time}, \"tx\": 1, \"ac\": \"${CHAIN}\", \"ttl\": ${ttl} }" \
-  #${BLOCKNOTIFYURL} )
-  #echo $resultJSON
-  echo "$CHAIN $time"
+  curl \
+  --silent \
+  --request OPTIONS \
+  ${BLOCKNOTIFYURL} \
+  --header 'Origin: http://localhost:8000' \
+  --header 'Access-Control-Request-Headers: Origin, Accept, Content-Type' \
+  --header 'Access-Control-Request-Method: POST'
+  sleep 1
+  resultJSON=$(curl \
+  --silent \
+  --header "Origin: http://localhost:8000" \
+  --request POST \
+  -d "{ \"size\": ${size}, \"height\": ${height}, \"time\": ${time}, \"tx\": 1, \"ac\": \"${CHAIN}\", \"ttl\": ${ttl} }" \
+  ${BLOCKNOTIFYURL} )
+  echo $resultJSON
   if [[ $height -eq 60 ]]; then
     exit
   fi
