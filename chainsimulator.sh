@@ -1,7 +1,7 @@
 BLOCKNOTIFYURL=https://3q5g302swj.execute-api.us-east-1.amazonaws.com/v0/blocknotify
 CHAIN=$1
 height=1
-size=1586
+size=1999029
 source start
 
 now=$(( $(date +%s) -$(( $RANDOM % 60 + 1 )) ))
@@ -23,7 +23,7 @@ do
   --silent \
   --header "Origin: http://localhost:8000" \
   --request POST \
-  -d "{ \"size\": ${size}, \"height\": ${height}, \"time\": ${time}, \"tx\": 1, \"ac\": \"${CHAIN}\", \"ttl\": ${ttl} }" \
+  -d "{ \"size\": ${size}, \"height\": ${height}, \"time\": ${time}, \"tx\": 8859, \"ac\": \"${CHAIN}\", \"ttl\": ${ttl} }" \
   ${BLOCKNOTIFYURL} )
   echo $resultJSON
   if [[ $height -eq 60 ]]; then
