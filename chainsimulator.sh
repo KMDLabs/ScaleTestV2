@@ -1,4 +1,4 @@
-BLOCKNOTIFYURL=https://peehbny6g3.execute-api.us-east-1.amazonaws.com/v0/blocknotify
+BLOCKNOTIFYURL=https://v7f30u8t0d.execute-api.us-east-1.amazonaws.com/v0/blocknotify
 CHAIN=$1
 height=1
 size=1999029
