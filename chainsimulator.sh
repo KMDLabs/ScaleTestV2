@@ -9,8 +9,8 @@ sleep $(( $start -$now ))
 
 while true
 do
-  time=`date +%s`
-  ttl=$(( $time +600 ))
+  time=$(( $(date +%s ) - $(( ( RANDOM % 110 )  + 10 )) ))
+  ttl=$(( $(date +%s) +900 ))
   curl \
   --silent \
   --request OPTIONS \
