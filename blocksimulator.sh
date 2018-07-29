@@ -6,6 +6,11 @@ start=0
 rm start
 acbase="TXSCLZ"
 
+if [ "$1" = "" ]; then
+  echo "Set chains eg: ./blocksimulator.sh 0 8191"
+  exit
+fi
+
 while [[ $start -eq 0 ]]; do
   curl --silent $STARTURL -o start
   sleep 30
