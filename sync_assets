@@ -5,7 +5,7 @@ source coinlist
 pubkey=0
 source ~/komodo/src/pubkey.txt
 
-if [[ pubkey -eq 0 ]]; then
+if [[ $pubkey -eq 0 ]]; then
   echo " "
   echo "Please set pubkey.txt in ~/komodo/src/pubkey.txt"
   echo "pubkey=your_pubkey_here"
